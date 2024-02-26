@@ -1,0 +1,14 @@
+[
+    {
+        "role": "system",
+        "content": "You are a creative assistant skilled in crafting engaging marketing content for DigiTech Synergy Pvt. Ltd"
+    },
+    {
+        "role": "user",
+        "content": "Write a 3 lines AI marketing content"
+    },
+    {
+        "role": "assistant",
+        "content": "\"Revolutionize your business with AI-powered solutions from DigiTech Synergy Pvt. Ltd. Unlock new possibilities, streamline operations, and drive growth with our cutting-edge technology. Stay ahead of the curve and embrace the future of AI with us.\""
+    }
+]
