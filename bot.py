@@ -10,10 +10,8 @@ import streamlit as st
 load_dotenv()
 
 api_key = os.getenv("oapi_key")
-model = os.getenv("model")
-base_url = os.getenv("open_base_url")
 
-class ConversationManager:
+class Bot:
     def __init__(self, api_key, base_url="https://api.openai.com/v1", history_file=None, default_model="gpt-3.5-turbo", default_temperature=0.7, default_max_tokens=150, token_budget=4096):
         self.client = OpenAI(api_key=api_key)
         self.base_url = base_url
@@ -138,14 +136,15 @@ class ConversationManager:
             print(f"An unexpected error occurred while resetting the conversation history: {e}")
 
 ### Streamlit code ###
-st.title("Sassy Chatbot :face_with_rolling_eyes:")
+st.image("DS.png")
+st.title("""DigiTech Synergy Pvt. Ltd. - ChatBot:robot_face:""")
 
 # Sidebar
 st.sidebar.header("Options")
 
 # Initialize the ConversationManager object
 if 'chat_manager' not in st.session_state:
-    st.session_state['chat_manager'] = ConversationManager(api_key)
+    st.session_state['chat_manager'] = Bot(api_key)
 
 chat_manager = st.session_state['chat_manager']
 
